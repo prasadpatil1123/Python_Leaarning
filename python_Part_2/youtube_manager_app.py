@@ -2,6 +2,15 @@
 def load_data():
     pass
 
+def add_video(video):
+    pass
+
+def update_video(video):
+    pass
+
+def delete_video(video):
+    pass
+
 def list_all_videos(video):
     pass
 
@@ -20,8 +29,14 @@ def main():
             case "1":
                 list_all_videos(videos)
             case "2":
-                pass
-
+                add_video(videos)
+            case "3":
+                update_video(videos)
+            case "4":
+                delete_video(videos)
+            case "5":
+                print("Exiting the application. Goodbye!")
+                break
 if __name__ == "__main__":
     main()
     
