@@ -1,6 +1,12 @@
+import json
 
 def load_data():
-    pass
+    try:
+        pass
+    except:
+        pass
+    finally:
+        pass
 
 def add_video(video):
     pass
