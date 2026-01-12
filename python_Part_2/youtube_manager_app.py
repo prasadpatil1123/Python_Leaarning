@@ -3,7 +3,10 @@ import json
 def load_data():
     try:
         with open("youtube.txt", 'r') as file:
-            return json.load(file)
+            test = json.load(file)
+            # print(test)
+            print(type(test))
+            return test
     except FileNotFoundError:
         return []
     finally:
@@ -27,8 +30,13 @@ def delete_video(videos):
     pass
 
 def list_all_videos(videos):
-    for index, videos in enumerate(videos, start = 1):
-        print(f"{index}. ")
+    pass
+    # print("\n")
+    # print("*" * 70)
+    # for index, video in enumerate(videos, start=1):
+        # print(f"{index}. {video['name']} ")
+    # print("\n")
+    # print("*" * 70)
 
 def main():
     videos = load_data()
@@ -40,7 +48,7 @@ def main():
         print("4. Delete a video")
         print("5. Exit")
         choice = input("Enter your choice (1-5): ")
-        print(videos)
+        # print(videos)
         
         match choice:
             case "1":
