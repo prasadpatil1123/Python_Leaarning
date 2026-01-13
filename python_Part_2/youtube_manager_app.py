@@ -5,7 +5,7 @@ def load_data():
         with open("youtube.txt", 'r') as file:
             test = json.load(file)
             # print(test)
-            print(type(test))
+            # print(type(test))
             return test
     except FileNotFoundError:
         return []
@@ -19,24 +19,26 @@ def save_data_helper(videos):
 def add_video(videos):
     name = input("Enter your Name: ")
     time = input("Enter your Time: ")
-    videos.append([{"Name": name, "Time":time}])
+    videos.append({"name": name, "time": time})
     save_data_helper(videos)
     
 
 def update_video(videos):
+    # list_all_videos(videos)
+    # index = int(input("Enter the video number to update: "))
     pass
+    
 
 def delete_video(videos):
     pass
 
 def list_all_videos(videos):
-    pass
-    # print("\n")
-    # print("*" * 70)
-    # for index, video in enumerate(videos, start=1):
-        # print(f"{index}. {video['name']} ")
-    # print("\n")
-    # print("*" * 70)
+    print("\n")
+    print("*" * 70)
+    for index, video in enumerate(videos, start=1):
+        print(f"{index}. {video['name']}, Duration: {video['time']} ")
+    print("\n")
+    print("*" * 70)
 
 def main():
     videos = load_data()
